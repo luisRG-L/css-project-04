@@ -1,0 +1,31 @@
+@import "./components/footer.scss";
+@import "./components/header.scss";
+@import "./components/main.scss";
+@import "./components/content.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a:not(.out),
+button {
+	text-decoration: none;
+	border: none;
+	border-bottom: 3px solid $underline-color;
+	padding: 10px 0;
+	background-color: transparent;
+	&:hover {
+		color: $underline-color;
+	}
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5em;
+	background-color: $primary-color;
+}

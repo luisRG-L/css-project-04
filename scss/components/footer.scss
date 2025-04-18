@@ -1,0 +1,102 @@
+@import "../variables/color.scss";
+@import "../mixins/responsive.scss";
+
+body > footer {
+	padding: 4em;
+	background-color: $secondary-color;
+	p {
+		text-align: center;
+	}
+	section {
+		display: flex;
+		flex-direction: column;
+		@include desktop {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		form {
+			display: flex;
+			align-items: end;
+			flex-direction: column;
+			div {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				padding: 1em;
+				gap: 10px;
+				color: white;
+				textarea {
+					resize: none;
+					height: 10em;
+				}
+				input::placeholder,
+				textarea::placeholder {
+					text-transform: uppercase;
+					padding: 2em;
+				}
+				input,
+				textarea {
+					border: none;
+					border-bottom: 2px solid $text-secondary-color;
+					background-color: transparent;
+					min-height: 5em;
+					color: white;
+				}
+				input:focus,
+				textarea:focus {
+					border: none;
+					border-bottom: 2px solid $underline-color;
+					outline: none;
+				}
+				input:invalid {
+					border-bottom: 2px solid lighten(red, 20%);
+				}
+				.error {
+					display: none;
+				}
+				input:invalid + .error {
+					display: inline;
+					text-align: right;
+					font-size: 1em;
+					color: lighten(red, 20%);
+				}
+			}
+		}
+		header {
+			display: flex;
+			flex-direction: column;
+			@include desktop {
+				padding-top: 6em;
+				padding-right: 8em;
+				gap: 1em;
+				p {
+					text-align: left;
+				}
+			}
+		}
+	}
+	#social-media {
+		border-top: 1px solid white;
+		margin-top: 4em;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 1em;
+		margin: 1em;
+		@include desktop {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			header {
+				margin: 0;
+				padding: 0;
+			}
+			padding: 1.5em;
+		}
+		nav ul {
+			display: flex;
+			gap: 1em;
+			list-style-type: none;
+		}
+	}
+}

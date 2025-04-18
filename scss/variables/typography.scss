@@ -1,0 +1,34 @@
+@font-face {
+	font-family: "bold";
+	src: url("../public/font/SpaceGrotesk-Bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "medium";
+	src: url("../public/font/SpaceGrotesk-Medium.ttf") format("truetype");
+}
+
+$heading-xl: (
+	"size": 88px,
+	"family": "bold",
+	"line": 88px,
+	"spacing": -2.5px,
+);
+
+$heading-l: (
+	"size": 48px,
+	"family": "bold",
+	"line": 56px,
+	"spacing": -1.5px,
+);
+
+$heading-m: (
+	"size": 24px,
+	"family": "bold",
+	"line": 32px,
+);
+
+$text: (
+	"size": 18px,
+	"family": "medium",
+	"line": 26px,
+);

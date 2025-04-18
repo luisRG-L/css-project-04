@@ -1,0 +1,85 @@
+@import "../variables/color.scss";
+@import "../variables/typography.scss";
+@import "../mixins/responsive.scss";
+
+body > header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 1em 3em;
+	gap: 10px;
+	@include desktop {
+		flex-direction: row-reverse;
+		padding: 1em 4em;
+		position: relative;
+	}
+	nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 1em;
+		width: min-content;
+		background: linear-gradient($primary-color, $secondary-color);
+		@include desktop {
+			z-index: 1;
+		}
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			list-style-type: none;
+			gap: 10px;
+		}
+
+		& > img {
+			margin-top: 2em;
+		}
+		@include desktop {
+			min-width: 20em;
+			right: 0;
+		}
+	}
+	h2 {
+		position: relative;
+		text-align: center;
+		@include desktop {
+			text-align: left;
+		}
+		span {
+			text-decoration-line: underline;
+			text-decoration-color: $underline-color;
+		}
+	}
+	h2 + p,
+	h2 + span {
+		@include desktop {
+			margin-right: 20em;
+			text-align: left;
+		}
+	}
+	p,
+	h1,
+	a {
+		text-align: center;
+	}
+	.left-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		@include desktop {
+			z-index: 2;
+		}
+	}
+
+	img {
+		width: min-content;
+		height: min-content;
+		max-width: 10em;
+	}
+}

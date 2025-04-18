@@ -1,0 +1,55 @@
+@import "../variables/typography.scss";
+@import "../variables/color.scss";
+
+h1 {
+	font-family: map-get($heading-m, "family");
+	color: white;
+	letter-spacing: map-get($heading-m, "spacing");
+	font-size: map-get($heading-m, "size");
+}
+
+h2 {
+	font-family: map-get($heading-l, "family");
+	color: white;
+	letter-spacing: map-get($heading-l, "spacing");
+	font-size: map-get($heading-l, "size");
+	line-height: map-get($heading-l, "line");
+	@include desktop {
+		font-family: map-get($heading-xl, "family");
+		color: white;
+		letter-spacing: map-get($heading-xl, "spacing");
+		font-size: map-get($heading-xl, "size");
+		line-height: map-get($heading-xl, "line");
+	}
+}
+
+h3 {
+	font-family: map-get($heading-m, "family");
+	color: white;
+	letter-spacing: map-get($heading-m, "spacing");
+	font-size: map-get($heading-m, "size");
+}
+
+p,
+span:not(.out),
+input::placeholder,
+textarea::placeholder,
+input,
+textarea {
+	font-family: map-get($text, "family");
+	line-height: map-get($text, "line");
+	font-size: map-get($text, "size");
+}
+
+p,
+span:not(.out) {
+	color: $text-secondary-color;
+}
+a,
+button {
+	font-family: map-get($text, "family");
+	color: white;
+	letter-spacing: 2px;
+	font-size: map-get($text, "size");
+	text-transform: uppercase;
+}
